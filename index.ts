@@ -10,10 +10,6 @@ server.get("/game", {websocket: true}, (connection: SocketStream, req: FastifyRe
     })
 });
 
-server.get('/ping', async (request, reply) => {
-    return 'pong\n';
-});
-
 server.listen(8080, (err, adress) => {
     if (err) {
         console.error(err);
